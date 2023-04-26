@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Alzheimer's Detection Project</title>
+  </head>
+  <style>
+    body {
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px #e6e6e6;
+}
+
+p {
+  color: #333;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 50px;
+  font-weight: normal;
+  text-align: justify;
+}
+
+.header-links {
+    float: right;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+  .header-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+
+  footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+  </style>
+  <body>
+    <header>
+      <div class="header-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+      </div>
+    </header>
+    <h1>Computer Vision + Deep Learning for the detection of MCI and Alzheimers Disease</h1>
+    <p>Alzheimers Disease (AD) is a progressive and an irreversible neurological disorder that affects the brain in human beings. It impairs cognitive and memory functions, whereas Mild Cognitive Impairment (MCI) is comparatively less severe a condition than AD, wherein cognitive abilities are lower than the normal age however not interfering with everyday living. MCI is a transitional stage between normal ageing and AD. Research suggests that individuals with MCI who have certain biomarkers, such as amyloid plaques in the brain, are more likely to progress to AD. Traditional methods for detecting AD and MCI involve assessing common symptoms like memory loss, spatial disorientation, and behavioural changes, as well as using scan types like MRI and PET, submitted for further diagnosis by experts, with the goal of identifying AD in patients at an early stage. <br><br><br>
+      This project proposes a Computer Vision and Deep Learning-based approach for detecting AD and predicting the transition from MCI to AD. It involves using Deep Learning models that are trained on datasets of images of medical scans, including scans of those with Very Mild, Mild to Moderate Alzheimers Disease, as well as from normal/healthy patients to differentiate and mine patterns that indicate early stages of the disease. Our approach leverages convolutional neural networks (CNNs) to learn discriminative features from MRI scans and uses them to classify patients as healthy, MCI, or AD. In addition to this, by leveraging the LSTM technique, our project carries the potential to be able to predict the likelihood of MCI progressing to AD, which could improve early diagnosis and treatment. Ultimately, this project could help to better comprehend the mechanism of Alzheimer's disease and lay the groundwork for developing successful treatments and interventions.
+      </p>
+
+      <footer>
+        <div>This application was developed by Sabahat Shaik and Palak Goel under the mentorship of Dr. Bhargav Prajwal and Dr. Jaswanth Nidamanuri. 
+        </div>
+      </footer>
+  </body>
+</html>

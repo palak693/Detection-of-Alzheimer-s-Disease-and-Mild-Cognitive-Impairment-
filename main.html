@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Alzheimer's Detection Project</title>
+  </head>
+  <style>
+    body {
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  padding-top: 80px;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px #e6e6e6;
+}
+
+h3 {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+form {
+  text-align: center;
+  margin-top: 50px;
+}
+
+input[type=file] {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #e6e6e6;
+}
+input[type=file]:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+input[type=submit] {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #e6e6e6;
+  transition: all 0.3s ease;
+}
+
+input[type=submit]:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+p {
+  color: #333;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 50px;
+  font-weight: normal;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.header-links {
+    float: right;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+
+  footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+  </style>
+  <body>
+    <header>
+      <div class="header-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+      </div>
+    </header>
+    <h1>Computer Vision + Deep Learning + SVM for the detection of MCI and Alzheimers Disease Using </h1>
+    <h3>This application is developed by Sabahat Shaik and Palak Goel, as a part of Mini Project II.</h3>
+    <form action="{{ url_for('classify') }}" method="post" enctype="multipart/form-data">
+      <input type="file" name="image">
+      <input type="submit" value="Classify">
+    </form>
+    {% if prediction %}
+    <p>Prediction: {{ prediction }}</p>
+    {% endif %}
+
+    <footer>
+      <div>This application was developed by Sabahat Shaik and Palak Goel under the mentorship of Dr. Bhargav Prajwal and Dr. Jaswanth Nidamanuri. 
+      </div>
+    </footer>
+  </body>
+</html>
